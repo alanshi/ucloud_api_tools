@@ -1,8 +1,5 @@
 # coding: utf-8
 
-import sys
-import json
-
 from sdk import UcloudApiClient
 from config import *
 
@@ -14,8 +11,8 @@ class UCloudAPI(object):
         self.api_client = UcloudApiClient(base_url, public_key,  private_key, project_id)
 
     def request(self, **kwargs):
+        return self.api_client.get(kwargs)
 
-        return self.api_client.get("/", kwargs)
 
 if __name__ == '__main__':
 
