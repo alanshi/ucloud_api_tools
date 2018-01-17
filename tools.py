@@ -25,7 +25,6 @@ if __name__ == '__main__':
         'UHostId': 'uhost-r4oawd'
     }
 
-    print ucloud_api.request(
+    print (ucloud_api.request(
         Action='GetUHostInstanceVncInfo',
-        **data
-    )
+        **data))
